@@ -5,12 +5,14 @@ class MainPage {
     draw() {
         document.body.innerHTML =  `
             <div class="wrapper">
-            <header>
-                <h1></h1>
+            <header class="header">
+                <div class="header-image">
+                    <img src="./assets/header.png" alt="rick and morty">
+                </div>
             </header>
             <main class="page">
-                <div class="gallery"> 
-                </div>
+                <div class="page-gallery"></div>
+                <div class="modal"></div>
             </main>
         </div>`;
     }
