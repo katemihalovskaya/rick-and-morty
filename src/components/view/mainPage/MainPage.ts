@@ -12,6 +12,7 @@ class MainPage {
             </header>
             <main class="page">
                 <div class="page-gallery"></div>
+                <div class="loader"></div>
                 <div class="modal"></div>
             </main>
         </div>`;

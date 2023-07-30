@@ -17,7 +17,7 @@ class Modal {
                     <li class="info-location"><span class="bold">Location</span>: ${location.name}</li>
                     <li class="info-gender"><span class="bold">Gender</span>: ${gender}</li>
                 </ul>
-                <span class="close">&times;</span>
+                <span class="close-btn">&times;</span>
             </div>
         `
     }

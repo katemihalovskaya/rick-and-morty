@@ -21,7 +21,7 @@ class Gallery {
             `;
         });
 
-        gallery.innerHTML = content;
+        gallery.innerHTML += content;
     }
 }
 

@@ -40,4 +40,5 @@
 
 .item-name {
     margin-top: 10px;
+    max-width: 260px;
 }

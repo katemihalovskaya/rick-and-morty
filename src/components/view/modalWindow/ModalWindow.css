@@ -3,6 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: auto; 
     padding: 10px 10px;
     z-index: 10;
     border: 2px solid rgb(77, 77, 75);
@@ -10,10 +11,6 @@
     box-shadow: 0px 0px 10px 0px rgb(77, 77, 75);
     border-radius: 2%;
     display: none;
-}
-
-.visible {
-    display: block;
 }
 
 .modal-content {
@@ -45,10 +42,31 @@
     margin-bottom: 10px;
 }
 
-.close {
+.close-btn {
     display: contents;
     color: #aaaaaa;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    pointer-events: auto;
 }
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none; 
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+/* .modal-open {
+    overflow: hidden;
+    pointer-events: none;
+    filter: blur(5px);
+} */
