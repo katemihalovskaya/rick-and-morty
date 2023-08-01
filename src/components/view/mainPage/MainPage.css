@@ -145,3 +145,8 @@ button:disabled {
     filter: drop-shadow(3px 3px 5px rgba(71, 71, 69, 0.8)) 
             drop-shadow(-3px -3px 5px rgba(47, 47, 46, 0.8));
 }
+
+.gallery-nav {
+    transition: 0.5s;
+    display: none;
+}

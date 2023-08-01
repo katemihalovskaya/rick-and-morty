@@ -29,31 +29,32 @@ class App {
 
     initMainPage() {
         this.view.drawMainPage();
+        this.initPagingListeners();
         this.initGallery(this.page);
         this.initModalListener();
     }
 
     private initGallery(page: number) {
         const switchInput = document.querySelector('.checkbox') as HTMLInputElement;
+        const navItems = document.querySelector('.gallery-nav') as HTMLElement;
 
         this.controller.getCharacters(page, (data: CharactersResponse) => this.drawGallery(data, false));
 
-        window.addEventListener('scroll', this.scroll.bind(this));
+        const boundScroll = this.scroll.bind(this);
 
-        switchInput.addEventListener('change', () => {          
+        window.addEventListener('scroll', boundScroll);
+
+        switchInput.addEventListener('change', () => {       
             if (switchInput.checked === true) {
                 this.controller.getCharacters(page, (data: CharactersResponse) => { 
                     this.drawGallery(data, true);
-                    this.initPagingListeners();
                     this.disablePagingButtons(data.info);
-                    window.removeEventListener('scroll', this.scroll.bind(this));
-                    const navItems = document.querySelector('.gallery-nav') as HTMLElement;
+                    window.removeEventListener('scroll', boundScroll);
                     navItems.style.display = 'block';
                 });
             } else {
-                const navItems = document.querySelector('.gallery-nav') as HTMLElement;
                 navItems.style.display = 'none';
-                window.addEventListener('scroll', this.scroll.bind(this));
+                window.addEventListener('scroll', boundScroll);
             }
         });
     }
@@ -67,7 +68,6 @@ class App {
             prevBtn.removeAttribute('disabled');
             this.controller.getCharacters(this.page, (data: CharactersResponse) => {
                 this.drawGallery(data, true);
-                this.initPagingListeners();
                 this.disablePagingButtons(data.info);
             });
         });
@@ -77,7 +77,6 @@ class App {
             nextBtn.removeAttribute('disabled');
             this.controller.getCharacters(this.page, (data: CharactersResponse) => {
                 this.drawGallery(data, true);
-                this.initPagingListeners();
                 this.disablePagingButtons(data.info);
             });
         });

@@ -7,13 +7,7 @@ class Gallery {
         
         const gallery = document.querySelector('.page-gallery') as HTMLElement;
 
-        let content = `
-            <div class="gallery-nav" ${!redrawGallery ? 'style="display: none;"' : ''}>
-                <button class="prev-btn">PREV</button>
-                <button class="next-btn">NEXT</button>
-            </div>
-            <div class="gallery-content">
-        `;
+        let content = ``;
 
         characters.forEach(character => {
             const {id, name, image} = character;
@@ -26,8 +20,6 @@ class Gallery {
                 </div>
             `;
         });
-
-        content += `</div>`;
 
         if (redrawGallery) {
             gallery.innerHTML = content;
