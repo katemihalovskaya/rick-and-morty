@@ -11,7 +11,14 @@ class MainPage {
                 </div>
             </header>
             <main class="page">
+                <div class="page-options">
+                    <label class="switch">
+                        <input class="checkbox" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <div class="page-gallery"></div>
+                <a id="toTop" href="#"><img src="./assets/arrow_up.svg" alt="Up"></a>
                 <div class="loader"></div>
                 <div class="modal"></div>
             </main>

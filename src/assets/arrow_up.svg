@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <title>Artboard-84</title>
+  <g id="Double_arrow_up" data-name="Double arrow up">
+    <path d="M15,12a1,1,0,0,1-.707-.293L12,9.414,9.707,11.707a1,1,0,0,1-1.414-1.414l3-3a1,1,0,0,1,1.414,0l3,3A1,1,0,0,1,15,12Z" style="fill:#cccccc"/>
+    <path d="M15,16a1,1,0,0,1-.707-.293L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414l3-3a1,1,0,0,1,1.414,0l3,3A1,1,0,0,1,15,16Z" style="fill:#cccccc"/>
+    <path d="M12,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22ZM12,4a8,8,0,1,0,8,8A8.009,8.009,0,0,0,12,4Z" style="fill:#cccccc"/>
+  </g>
+</svg>

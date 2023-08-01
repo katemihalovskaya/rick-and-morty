@@ -21,8 +21,8 @@ export class AppView {
         this.mainPage.draw();
     }
 
-    drawGallery(characters: Characters) {
-        this.gallery.draw(characters);
+    drawGallery(characters: Characters, redrawGallery: boolean) {
+        this.gallery.draw(characters, redrawGallery);
     }
 
     drawModal(character: Character) {
